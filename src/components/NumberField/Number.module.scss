@@ -1,0 +1,73 @@
+@import "../Colors.scss";
+
+.form-group {
+  width: 100%;
+}
+
+.form-container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  input {
+    min-width: calc(100% - 47px);
+    padding: 16px 0 16px 45px;
+    border: 1px solid $grey-300;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+    appearance: textfield;
+    &:hover {
+      border-color: $grey-700;
+    }
+    &:focus {
+      border-color: $grey-700;
+      outline: none;
+      + label {
+        padding: 0 3px;
+        background: #ffffff;
+        color: $grey-700 !important;
+        top: 0%;
+        color: $grey-500;
+        font-size: 12px !important;
+        left: 24px;
+      }
+    }
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+    &:not(:placeholder-shown) {
+      border-color: $grey-300;
+      outline: none;
+      + label {
+        padding: 0 3px;
+        background: #ffffff;
+        color: $grey-700 !important;
+        top: 0%;
+        color: $grey-500;
+        font-size: 12px !important;
+        left: 24px;
+      }
+    }
+  }
+  label {
+    position: absolute;
+    transform: translateY(-50%);
+    padding: 0 3px;
+    background: #ffffff;
+    color: $grey-700 !important;
+    top: 0%;
+    color: $grey-500;
+    font-size: 12px !important;
+    left: 24px;
+  }
+  .currency {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    color: $grey-700;
+    font-size: 14px;
+    left: 24px;
+    transition: all 0.5s ease-in-out;
+  }
+}

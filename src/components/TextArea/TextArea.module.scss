@@ -1,0 +1,50 @@
+@import "../Colors.scss";
+
+.form-group {
+  width: 100%;
+}
+
+.form-container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  textarea {
+    max-width: calc(100% - 50px);
+    min-width: calc(100% - 50px);
+    min-height: 147px;
+    padding: 16px 24px;
+    border: 1px solid $grey-300;
+    font-size: 14px;
+    border-radius: 8px;
+    font-family: "Public Sans", sans-serif;
+    color: $grey-700;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      border-color: $grey-700;
+      + label {
+        color: $grey-700 !important;
+      }
+    }
+    &:focus {
+      border-color: $grey-700;
+      outline: none;
+      + label {
+        color: $grey-700 !important;
+      }
+    }
+    &:not(:placeholder-shown) {
+      color: $grey-700 !important;
+      + label {
+        color: $grey-700 !important;
+      }
+    }
+  }
+  label {
+    font-size: 12px;
+    color: $grey-500;
+    order: -1;
+    transition: all 0.5s ease-in-out;
+  }
+}

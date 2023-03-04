@@ -1,0 +1,48 @@
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.addBtn {
+    display: flex;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    gap: 8px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+  }
+
+  .green-bg {
+    background: #00AB55;
+  }
+
+  .green-bg:disabled {
+    background-color: #5F8575;
+  }
+
+  .green-bg:hover {
+    background-color: #32CD32;
+  }
+
+  .red-bg {
+    background: #7A0916;
+  }
+
+  .red-bg:hover {
+    opacity: 0.5;
+  }
+  
+  .addTxt {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    color: #FFFFFF;
+  }
+  
