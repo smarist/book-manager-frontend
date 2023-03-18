@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useReducer } from 'react'
-import { useNavigate, useParams } from 'react-router';
+import { useNavigate, useParams } from "react-router-dom";
 import { getBase64 } from '../../../utils/helpers';
 
 function useManageBooks(edit) {
