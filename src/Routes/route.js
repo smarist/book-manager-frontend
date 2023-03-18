@@ -13,10 +13,10 @@ export const router = createBrowserRouter([
     },
     {
         path: "/add-book",
-        element: <ManageBooks />
+        element: <Books />
     },
     {
         path: "/edit-book/:bookId",
-        element: <ManageBooks edit/>
+        element: <Books edit/>
     }
 ])

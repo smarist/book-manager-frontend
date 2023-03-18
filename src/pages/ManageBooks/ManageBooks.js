@@ -8,14 +8,14 @@ import useManageBooks from "./hooks/useManageBooks";
 import styles from "./ManageBooks.module.scss";
 
 function ManageBooks({ edit }) {
-  const { state, dispatch, handleAddBook } = useManageBooks();
+  const { state, dispatch, handleAddBook, onSelectImage } = useManageBooks(edit);
   return (
     <div className={styles.manageBooks}>
       <h2 className={styles.manageBookTitle}>
         {edit ? "Update Book" : "New Book"}
       </h2>
       <main className={styles.main}>
-        <ImageUploader />
+        <ImageUploader label="Book image" name="book image" onSelectImage={onSelectImage} value={state.image} imgSrc={state.image_src} />
         <TextField
           label="Title"
           name="book-title"
